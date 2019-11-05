@@ -19,4 +19,4 @@ RUN yum install -y -q epel-release && \
         rpm-build
 RUN mkdir /dist
 ADD build.sh /
-CMD ["/build.sh", "3.6.4"]
+CMD ["/build.sh", "3.6.5"]
