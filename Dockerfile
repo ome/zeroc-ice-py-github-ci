@@ -15,8 +15,7 @@ RUN yum install -y -q epel-release && \
         openssl-devel \
         python3 \
         python3-devel \
-        python3-wheel \
-        rpm-build
+        python3-wheel
 RUN mkdir /dist
 ADD build.sh /
 CMD ["/build.sh", "3.6.5"]
