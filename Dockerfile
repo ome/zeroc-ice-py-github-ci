@@ -13,10 +13,10 @@ RUN yum install -y -q epel-release && \
         gcc-c++ \
         libdb-utils \
         openssl-devel \
-        python-devel \
-        python-pip \
+        python3 \
+        python3-devel \
+        python3-wheel \
         rpm-build
-RUN pip install wheel
 RUN mkdir /dist
 ADD build.sh /
 CMD ["/build.sh", "3.6.4"]
