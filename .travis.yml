@@ -1,14 +1,13 @@
+---
+dist: bionic
 language: python
-cache: pip
-sudo: required
-services:
-- docker
-
-before_script:
-- docker build -t builder .
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
 
 script:
-- docker run --rm -v $PWD/dist:/dist builder
+  - ./build.sh
 
 deploy:
   provider: releases

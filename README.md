@@ -1,15 +1,6 @@
-Centos 7 Zeroc Ice Python 3 Builder
-===================================
+Travis Bionic Zeroc Ice Python 3 Builder
+========================================
 
-Builds Zeroc Ice wheel and RPM Python 3 packages for CentOS 7.
+Builds Zeroc Ice wheel Python 3.x packages for Travis Bionic.
 
-This can be used to create installable binary packages as an alternative to compiling from source using pip.
-
-    docker build -t builder .
-    docker run --rm -v $PWD/dist:/dist builder
-
-To build a different version of IcePy:
-
-    docker run --rm -v $PWD/dist:/dist builder /build.sh VERSION
-
-Packages will be copied to `$PWD/dist`.
+Ice must be compiled against the Python and OpenSSL versions on Travis, which may be different from the distribution versions.
